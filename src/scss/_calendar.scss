@@ -4,11 +4,8 @@ $w: 42px;
 $h: 36px;
 
 .calendar {
-
   background: $c1;
-
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +13,44 @@ $h: 36px;
 
   &__body {
     position: relative;
+    overflow: hidden;
+  }
+
+  &__day {
+    &s {
+      width: ($w + 4 + 2) * 7;
+      position: relative;
+      z-index: 3;
+
+      :after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    position: relative;
+    width: $w;
+    height: $h;
+    text-align: center;
+    line-height: $h;
+    float: left;
+    background: $c1;
+    background-clip: content-box;
+    border: 2px solid rgba($c1, .3);
+    margin: 1px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: -3px;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      border: 1px solid $c1;
+    }
+
   }
 
   &__move {
@@ -27,7 +62,6 @@ $h: 36px;
     top: 50%;
     margin-top: -73px;
     margin-left: -73px;
-
     background: radial-gradient(ellipse at center, darken($c2, 30) 0%, $c1 60%);
   }
 
