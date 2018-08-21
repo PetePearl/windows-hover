@@ -1,0 +1,35 @@
+$font-size: 14px;
+$line-height: $font-size+2px;
+$color: #000;
+$background: #fff;
+$font-family: 'Arial';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  background: $background;
+  font-family: $font-family, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//цвета выделения
+::selection,
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}

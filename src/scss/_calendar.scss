@@ -1,0 +1,34 @@
+$c1: #333;
+$c2: #fff;
+$w: 42px;
+$h: 36px;
+
+.calendar {
+
+  background: $c1;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $c2;
+
+  &__body {
+    position: relative;
+  }
+
+  &__move {
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    margin-top: -73px;
+    margin-left: -73px;
+
+    background: radial-gradient(ellipse at center, darken($c2, 30) 0%, $c1 60%);
+  }
+
+}
